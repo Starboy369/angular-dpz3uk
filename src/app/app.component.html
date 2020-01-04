@@ -1,0 +1,22 @@
+<h3> This project is done by {{name}} </h3>
+<h4> Project Name : {{projectname}} </h4>
+<hr>
+<br>
+<br>
+
+
+<div *ngFor = "let items of Filetereddata; let index = index">
+  <hr>
+  <b> {{items.Question}} </b>
+  <br>
+  <u> {{items.desc}}</u>
+  <hr>
+  </div>
+  <br>
+  <br>
+  <br> 
+  <button (click)="goto(0);"> First </button>
+  <button (click) = "goto(pager.index -1);"> Previous </button>
+  <button (click)= "goto(pager.index +1);"> Next </button>
+  <button (click)="goto(pager.count - 1);"> Last </button>
+
